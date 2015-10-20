@@ -6,6 +6,6 @@ var Component = require("montage/ui/component").Component;
  */
 exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
-        new MovieService.
+        new MovieService().fetchData().then(function (
     }
 });
