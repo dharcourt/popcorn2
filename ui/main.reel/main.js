@@ -10,8 +10,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     constructor: {
         value: function () {
-            this.categories = new MovieService().fetchData(Category.TYPE);
+            this.categories = [{name: "one"}, {name: "two"}, {name: "three"}]; //new MovieService().fetchData(Category.TYPE);
             console.log(this.categories);
+            console.log(new MovieService().fetchData(Category.TYPE));
         }
     }
 
