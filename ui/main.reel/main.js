@@ -9,7 +9,9 @@ var Component = require("montage/ui/component").Component,
 exports.Main = Component.specialize(/** @lends Main# */ {
 
     constructor: {
-        this.categories = new MovieService().fetchData(Category.TYPE);
+        value: function () {
+            this.categories = new MovieService().fetchData(Category.TYPE);
+        }
     }
 
 });
